@@ -50,5 +50,96 @@ namespace PrimeFactors.Tests
             // Assert
             CollectionAssert.AreEqual(expected, factors);
         }
+
+        [TestMethod]
+        public void FactorsOfFour_AreTwoAndTwo()
+        {
+            // Setup
+            var expected = new List<int>() { 2, 2 };
+
+            // Act
+            var factors = finder.Find(4);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, factors);
+        }
+
+        [TestMethod]
+        public void FactorsOfFive_AreFive()
+        {
+            // Setup
+            var expected = new List<int>() { 5 };
+
+            // Act
+            var factors = finder.Find(5);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, factors);
+        }
+
+        [TestMethod]
+        public void FactorsOfSix_AreThreeAndTwo()
+        {
+            // Setup
+            var expected = new List<int>() { 2, 3 };
+
+            // Act
+            var factors = finder.Find(6);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, factors);
+        }
+
+        [TestMethod]
+        public void FactorsOfSeven_AreSeven()
+        {
+            // Setup
+            var expected = new List<int>() { 7 };
+
+            // Act
+            var factors = finder.Find(7);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, factors);
+        }
+
+        [TestMethod]
+        public void FactorsOfEight_AreTwoAndTwoAndTwo()
+        {
+            // Setup
+            var expected = new List<int>() { 2, 2, 2 };
+
+            // Act
+            var factors = finder.Find(8);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, factors);
+        }
+
+        [TestMethod]
+        public void FactorsOfNine_AreThreeAndThree()
+        {
+            // Setup
+            var expected = new List<int>() { 3, 3 };
+
+            // Act
+            var factors = finder.Find(9);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, factors);
+        }
+
+        [TestMethod]
+        public void FactorsOf360_Are2n2n2n3n3n5()
+        {
+            // Setup
+            var expected = new List<int>() { 2, 2, 2, 3, 3, 5 };
+
+            // Act
+            var factors = finder.Find(360);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, factors);
+        }
     }
 }

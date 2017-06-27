@@ -15,12 +15,22 @@ namespace PrimeFactors
             if (number < 2)
                 return factors;
 
-            if (number == 2)
-                factors.Add(2);
-            if (number == 3)
-                factors.Add(3);
+            var potentialPrime = 2;
+
+            while (number > 1)
+            {
+                while (number.IsDivisibleBy(potentialPrime))
+                {
+                    factors.Add(potentialPrime);
+                    number = number / potentialPrime;
+                }
+
+                potentialPrime++;
+            }
 
             return factors;
         }
+
+        
     }
 }
